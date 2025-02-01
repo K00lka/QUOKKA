@@ -9,7 +9,7 @@ const App: React.FC = () => {
   const data:Record<string,{description:string,image:string,Question?:string,Baton_1:Button,Baton_2?:Button, Baton_3?:Button}>={
     Scena_1:{
       description: "Księżyc odbijający słońce, które zniknęło już jakiś czas temu za horyzontem wzywa cię do opuszczenia swojej norki. Lekko zaspana wyzierasz ze swojej przytulnej jamy. Inne kuoki już dawno wybrały się na poszukiwanie  pożywienia. Drepczesz więc samotnie, aż wpadasz na bardzo okazały krzak Guichenotia ledifolia",
-      image: "/Act_1.jpeg",
+      image: "./public/Act_1.jpeg",
       Question: "To na prawdę okazały krzak, może waro zabrać na zapas pare gałązek?",
       Baton_1:{
         tekst: "Nie zbieram",
@@ -23,7 +23,7 @@ const App: React.FC = () => {
     
     Scena_2:{
       description: "Wracasz do norki. W środku snu budzi cię hałas.",
-      image: "/dist/Act_2.jpeg",
+      image: "./public/Act_2.jpeg",
       
       Baton_1:{
         tekst: "Dalej",
@@ -34,7 +34,7 @@ const App: React.FC = () => {
 
     Scena_3:{
       description: "Wyściubisz nos z norki, oślepia cię światło słoneczne, ale swoim wielkim nochalem wyczuwasz nadchodzące zagrożenie - psy Dingo!",
-      image: "/dist/Act_3.jpeg",
+      image: "./public/Act_3.jpeg",
       Question: "Bardzo się boję! Co mam robić?",
       Baton_1:{
         tekst: "Chowam się",
@@ -49,7 +49,7 @@ const App: React.FC = () => {
     },
     Scena_4a:{
       description: "Zostajesz w norce i liczysz, że cię nie znajdą. Jednak bardzo się mylisz. Słyszysz jak psy obwąchują twoje drzwi...",
-      image: "/dist/Act_4a.jpeg",
+      image: "./public/Act_4a.jpeg",
       
       Baton_1:{
         tekst: "Dalej",
@@ -59,17 +59,17 @@ const App: React.FC = () => {
     },
     Fatal:{
       description: "Umierasz",
-      image: "/dist/Game_over.jpeg",
+      image: "./public/Game_over.jpeg",
       
       Baton_1:{
         tekst: "Spróbuj ponownie",
-        direct_to: () => setScene("Scena_1")
+        direct_to: () => {setScene("Scena_1");setGałązki(false)}
       }
       
     },
     Scena_4b_0:{
       description: "Korzystasz z tylnego wyjścia. Wyjście było ryzykowne, ale wygłodniałe psy Dingo cię nie zauważyły. Chowasz się za głazem przy wyjściu z norki",
-      image: "/dist/Act_4b_0.jpeg",
+      image: "./public/Act_4b_0.jpeg",
       Question: "Niedaleko jest kuokowy magazyn budowlany, możnaby spróbować się doniego zakraść. A możelepiej uciec w siną dal?",
       Baton_1:{
         tekst: "Zakradam się",
@@ -83,7 +83,7 @@ const App: React.FC = () => {
     },
     Scena_4b_1a:{
       description: "Korzystasz z tylnego wyjścia, w łapki chwytasz zebrane wczesniej gałązki. Wyjście było ryzykowne, ale wygłodniałe psy Dingo cię nie zauważyły. Chowasz się za głazem przy wyjściu z norki",
-      image: "/dist/Act_4b_1a.jpeg",
+      image: "./public/Act_4b_1a.jpeg",
       
       Baton_1:{
         tekst: "Uciekam",
@@ -104,7 +104,7 @@ const App: React.FC = () => {
     
     Scena_6a:{
       description: "Za bardzo boisz się wyjść. Zostajesz za kamieniem. Po jakimś czasie zaczynasz słyszeć coraz bliższe kroki psów Dingo...",
-      image: "/dist/Act_6a.jpeg",
+      image: "./public/Act_6a.jpeg",
 
       
       Baton_1:{
@@ -114,7 +114,7 @@ const App: React.FC = () => {
     },
     Scena_6a_0:{
       description: "Za bardzo boisz się wyjść. Zostajesz za kamieniem. Po jakimś czasie zaczynasz słyszeć coraz bliższe kroki psów Dingo...",
-      image: "/dist/Act_6a_0.jpeg",
+      image: "./public/Act_6a_0.jpeg",
 
       //alternatywny obbrazek z gałązkami
       Baton_1:{
@@ -124,7 +124,7 @@ const App: React.FC = () => {
     },
     Scena_6b:{
       description: "Uciekasz tam, gdzie cię krótkie nóżki poniosą.Psy Dingo ruszaja w pościg za tobą, bo nie jesteś maratończykiem i głośno dyszysz. Masz jeszcze w zanadrzu jedną tajną broń",
-      image: "/dist/Act_6b.jpeg",
+      image: "./public/Act_6b.jpeg",
       
       Baton_1:{
         tekst: "Nie",
@@ -137,7 +137,7 @@ const App: React.FC = () => {
     },
     Scena_6c:{
       description: "Po cichutku zakradasz się do kuokowego magazynu budowlanego, pełno w nim zaokrąglonych kamieni. I właściwie tylko kamieni.",
-      image: "/dist/Act_6c.jpeg",
+      image: "./public/Act_6c.jpeg",
       
       Baton_1:{
         tekst: "Dalej",
@@ -146,7 +146,7 @@ const App: React.FC = () => {
     },
     Scena_6c_0:{
       description: "Po cichutku zakradasz się do kuokowego magazynu budowlanego, pełno w nim zaokrąglonych kamieni. I właściwie tylko kamieni.",
-      image: "/dist/Act_6c_0.jpeg",
+      image: "./public/Act_6c_0.jpeg",
       
       Baton_1:{
         tekst: "Dalej",
@@ -157,7 +157,7 @@ const App: React.FC = () => {
     
     Scena_7_1a:{
       description: "Robisz się głodna, a niech to trzeba było zebrać wtedy gałązki. Burczenie w twoim brzzuchy zwabia psy Dingo. To koniec.",
-      image: "/dist/Act_7_1a.jpeg",
+      image: "./public/Act_7_1a.jpeg",
       
       Baton_1:{
         tekst: "Dalej",
@@ -166,7 +166,7 @@ const App: React.FC = () => {
     },
     Scena_7_1b:{
       description: "Robisz si głodna, dobrze że zabrałaś gałązki. Wyciągasz je i zaspokajasz głód. Najedzony umysł zaczyna pracować. Obmyślasz plan, który ocali całą wioskę.",
-      image: "/dist/Act_7_1b.jpeg",
+      image: "./public/Act_7_1b.jpeg",
       
       Baton_1:{
         tekst: "Dalej",
@@ -175,16 +175,16 @@ const App: React.FC = () => {
     },
     Scena_8_1:{
       description: "Zbierasz kamienie i wychodzisz z magazynu.Wyciągasz młode kłoczątko z torby i upychasz do niej kamienie. Psy reagują na wrzask twojego potomstwa i biegną w twoją stronę rozwścieczone. Ciskasz w psy kamieniami z wyrzutni, które zebrałaś w magazynie. Psy Dingo uciekają z podkulonymi ogonami. Wioska uratowana! Pakujesz bombelka spowrotem do torby i wracasz do snu w norce.",
-      image: "/dist/Act_8_1.jpeg",
+      image: "./public/Act_8_1.jpeg",
       
       Baton_1:{
         tekst: "Jeszcze raz!",
-        direct_to: () => setScene("Scena_1")
+        direct_to: () => {setScene("Scena_1"); setGałązki(false)}
       }
     },
     Scena_8a:{
       description: "Poddajesz się. Żadne wysiłki nie przyniosą już ratunku. Psy Dingo doganiają cię, to koniec.",
-      image: "/dist/Act_8a.jpeg",
+      image: "./public/Act_8a.jpeg",
       
       Baton_1:{
         tekst: "Dalej",
@@ -193,11 +193,11 @@ const App: React.FC = () => {
     },
     Scena_8b:{
       description: "Katapultujesz ze swojej torby małe kuokczątko. Zaczyna wydawać z siebie niebotyczny krzyk, który odwraca uwagę psów Dingo i pozwala Ci na ucieczkę. Udaje ci się uciec w wysokie trawy. Przeżywasz, ale co to za życie. Do końca swojego krótkego kuokowego istnienia jesteś samotną, wygnaną matką abortystką.",
-      image: "/dist/Act_8b.jpeg",
+      image: "./public/Act_8b.jpeg",
       
       Baton_1:{
         tekst: "Jeszcze raz!",
-        direct_to: () => setScene("Scena_1")
+        direct_to: () => {setScene("Scena_1");setGałązki(false)}
       }
     },
     
