@@ -14,7 +14,7 @@ const App: React.FC = () => {
       Baton_1:{
         tekst: "Nie zbieram",
         direct_to: () => setScene("Scena_2")
-      },
+      }, 
       Baton_2:{
         tekst: "Zbieram",
         direct_to: () => {setScene("Scena_2"); setGałązki(true)}
